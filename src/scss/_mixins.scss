@@ -1,0 +1,23 @@
+@mixin phoneBreakpoint {
+  @media (max-width: $phone-width) {
+    @content;
+  }
+}
+
+@mixin tabletBreakpoint {
+  @media (max-width: $tablet-min-width) {
+    @content;
+  }
+}
+
+@mixin noteBookBreakpoint {
+  @media (max-width: $tablet-max-width) {
+    @content;
+  }
+}
+
+@mixin desktopBreakpoint {
+  @media (min-width: $laptop-width) {
+    @content;
+  }
+}
