@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index page render should render page 1`] = `
+<div>
+  <Link
+    to="/profile"
+  >
+    Home
+  </Link>
+  <h1>
+    Likia
+  </h1>
+</div>
+`;
