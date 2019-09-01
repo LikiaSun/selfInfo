@@ -1,0 +1,43 @@
+.intro-container {
+  align-items: center;
+  color: $white;
+}
+
+.social-container {
+  margin-top: 5px;
+  svg {
+    height: 30px;
+    border-radius: 2px;
+  }
+}
+
+.social-item {
+  transition: all 0.6s;
+  &:nth-of-type(1) {
+    &:hover {
+      color: black;
+      background: white;
+      svg {
+        background: white !important;
+      }
+    }
+  }
+  &:nth-of-type(2) {
+    &:hover {
+      color: #ea4c89;
+      background: white;
+      svg {
+        background: white !important;
+      }
+    }
+  }
+  &:nth-of-type(3) {
+    &:hover {
+      color: black;
+      background: white;
+      svg {
+        background: white !important;
+      }
+    }
+  }
+}

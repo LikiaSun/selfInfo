@@ -1,0 +1,51 @@
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 14px;
+  padding-left: 14px;
+  @include noteBookBreakpoint() {
+    max-width: 960px;
+  }
+  @include desktopBreakpoint() {
+    max-width: 1140px;
+  }
+}
+
+.row {
+  display: flex;
+  -webkit-display: flex;
+  -ms-display: flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  @include noteBookBreakpoint() {
+    margin-left: -14px;
+    margin-right: -14px;
+  }
+}
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 14px;
+    padding-right: 14px;
+    flex: 0 0 percentage($i / $grid-columns);
+    -webkit-flex: 0 0 percentage($i / $grid-columns);
+    -ms-flex: 0 0 percentage($i / $grid-columns);
+    max-width: percentage($i / $grid-columns);
+    @include tabletBreakpoint() {
+      @include response-col($i);
+    }
+  }
+}
+
+.ab-center {
+  margin: auto;
+}
+
+.mx-2 {
+  margin: 0px 0.5rem;
+}
