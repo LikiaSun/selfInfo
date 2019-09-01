@@ -50,10 +50,12 @@
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
     "prettier": "^1.18.2",
+    "react-svg-loader": "^3.0.3",
     "react-test-renderer": "^16.9.0",
     "sass-loader": "^7.3.1",
     "sequelize-cli": "^5.5.0",
     "style-loader": "^1.0.0",
+    "svg-inline-loader": "^0.8.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.39.2",
     "webpack-bundle-analyzer": "^3.4.1",
@@ -73,7 +75,9 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-pwa": "^0.0.1",
-    "react-router-dom": "^5.0.1"
+    "react-router-dom": "^5.0.1",
+    "react-spring": "^8.0.27",
+    "react-svg": "^10.0.20"
   },
   "browserslist": [
     "> 1%",
