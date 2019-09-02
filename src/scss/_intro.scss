@@ -3,6 +3,50 @@
   color: $white;
 }
 
+.intro-title {
+  position: relative;
+  &::before {
+    position: absolute;
+    display: block;
+    top: 0.5rem;
+    content: '';
+    width: 136px;
+    height: 1.75rem;
+    background: $white;
+    transform: translateX(-136px);
+    mix-blend-mode: exclusion;
+    opacity: 0;
+    transition: transform 0.43s;
+  }
+  &:hover::before {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: transform 0.43s;
+  }
+}
+
+.intro-subtitle {
+  position: relative;
+  &::before {
+    position: absolute;
+    display: block;
+    top: 0.25rem;
+    content: '';
+    width: 136px;
+    height: 1rem;
+    background: $white;
+    transform: translateX(-136px);
+    mix-blend-mode: exclusion;
+    opacity: 0;
+    transition: transform 0.43s;
+  }
+  &:hover::before {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: transform 0.43s;
+  }
+}
+
 .social-container {
   margin-top: 5px;
   svg {
