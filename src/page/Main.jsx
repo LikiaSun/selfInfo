@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 
 import { AppContext } from '@/context';
 import Loading from '@/components/Loading';
+import Navbar from '@/components/Navbar';
 import Header from '@/components/MainHeader';
 
 const Main = () => {
@@ -19,6 +20,7 @@ const Main = () => {
   return (
     <main>
       {appState.isLoading && <Loading />}
+      <Navbar />
       <Header />
     </main>
   );

@@ -1,0 +1,50 @@
+.profile-container {
+  width: 100vw;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .profile-header {
+    display: flex;
+    margin-top: 20px;
+    .avatar {
+      order: 0;
+      width: 150px;
+      height: 150px;
+      background: white;
+      border-radius: 50%;
+      img {
+        width: 150px;
+        height: 150px;
+        @include phoneBreakpoint() {
+          width: 80px;
+          height: 80px;
+        }
+      }
+      @include phoneBreakpoint() {
+        width: 80px;
+        height: 80px;
+      }
+    }
+    .profile-text {
+      flex-grow: 1;
+      margin-left: 40px;
+      font-weight: 300;
+      @include phoneBreakpoint() {
+        margin-left: 10px;
+      }
+      h2 {
+        font-weight: 300;
+        @include phoneBreakpoint() {
+          font-size: 1rem;
+        }
+      }
+      p {
+        margin-bottom: 5px;
+        @include phoneBreakpoint() {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}

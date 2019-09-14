@@ -1,4 +1,3 @@
-// react angular vue git nodejs sass
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faVuejs,
@@ -12,6 +11,7 @@ import {
   faDribbbleSquare,
   faMedium,
 } from '@fortawesome/free-brands-svg-icons';
+import { faHome, faBriefcase, faUser } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
   faVuejs,
@@ -23,7 +23,10 @@ library.add(
   faAdobe,
   faGithubSquare,
   faDribbbleSquare,
-  faMedium
+  faMedium,
+  faHome,
+  faBriefcase,
+  faUser
 );
 
 export default library;

@@ -1,14 +1,17 @@
 .intro-container {
+  position: absolute;
+  top: 45%;
   align-items: center;
   color: $white;
 }
 
 .intro-title {
   position: relative;
+  line-height: 2rem;
   &::before {
     position: absolute;
     display: block;
-    top: 0.5rem;
+    top: 0;
     content: '';
     width: 136px;
     height: 1.75rem;
@@ -27,13 +30,14 @@
 
 .intro-subtitle {
   position: relative;
+  line-height: 1.25rem;
   &::before {
     position: absolute;
     display: block;
-    top: 0.25rem;
+    top: 0;
     content: '';
     width: 136px;
-    height: 1rem;
+    height: 1.2rem;
     background: $white;
     transform: translateX(-136px);
     mix-blend-mode: exclusion;
@@ -58,29 +62,80 @@
 .social-item {
   transition: all 0.6s;
   &:nth-of-type(1) {
+    position: relative;
+    &::before {
+      display: block;
+      white-space: nowrap;
+      content: 'Github: @LikiaSun';
+      position: absolute;
+      top: 1.5rem;
+      left: 0;
+      color: transparent;
+      pointer-events: none;
+      transition: all 0.7s;
+      transform: translateY(-1.5rem);
+    }
     &:hover {
       color: black;
       background: white;
       svg {
         background: white !important;
       }
+      &::before {
+        color: $white;
+        transform: translateY(0px);
+      }
     }
   }
   &:nth-of-type(2) {
+    position: relative;
+    &::before {
+      display: block;
+      white-space: nowrap;
+      content: 'Dribbble: Likia';
+      position: absolute;
+      top: 1.5rem;
+      left: -2.2rem;
+      color: transparent;
+      pointer-events: none;
+      transition: all 0.7s;
+      transform: translateY(-1.5rem);
+    }
     &:hover {
       color: #ea4c89;
       background: white;
       svg {
         background: white !important;
       }
+      &::before {
+        color: $white;
+        transform: translateY(0px);
+      }
     }
   }
   &:nth-of-type(3) {
+    position: relative;
+    &::before {
+      display: block;
+      white-space: nowrap;
+      content: 'Medium: @likiasun';
+      position: absolute;
+      top: 1.5rem;
+      left: -4.4rem;
+      color: transparent;
+      pointer-events: none;
+      transition: all 0.7s;
+      transform: translateY(-1.5rem);
+    }
     &:hover {
       color: black;
       background: white;
       svg {
         background: white !important;
+      }
+      &::before {
+        color: $white;
+        transform: translateY(0px);
       }
     }
   }
