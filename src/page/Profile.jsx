@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
 import Emoji from '@/components/Emoji';
 import Navbar from '@/components/Navbar';
-import avatar from '@/assets/images/head.png';
+
+const Avatar = React.lazy(() => import('../components/Avatar'));
 
 const Profile = () => {
   return (
@@ -11,7 +12,9 @@ const Profile = () => {
       <main className="profile-container">
         <div className="profile-header">
           <div className="avatar">
-            <img src={avatar} alt="avatar... maybe" />
+            <Suspense fallback={<div className="bg-skelton" />}>
+              <Avatar />
+            </Suspense>
           </div>
           <div className="profile-text">
             <h2>孫崇碩(Sun Chuong Shuo)</h2>
