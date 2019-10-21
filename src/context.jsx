@@ -2,14 +2,12 @@ import React, { createContext, useState } from 'react';
 
 export const AppContext = createContext();
 
-export const AppProvider = ({ children }) => {
-  const [appState, setState] = useState({
+export const AppProvider = props => {
+  const [appState, setApp] = useState({
     isLoading: false,
   });
 
-  return (
-    <AppContext.Provider value={[appState, setState]}>
-      {children}
-    </AppContext.Provider>
-  );
+  const defaultVaules = [appState, setApp];
+
+  return <AppContext.Provider value={defaultVaules} {...props} />;
 };
