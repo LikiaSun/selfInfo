@@ -18,7 +18,6 @@ module.exports = merge(common, {
   devServer: {
     contentBase: path.join(__dirname, '..', 'dist'),
     compress: true,
-    host: 'senlima.local',
     historyApiFallback: true,
     port: 9000,
     hot: true,

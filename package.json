@@ -12,7 +12,7 @@
     "serve": "nodemon --exec babel-node ./server/server.js",
     "build": "webpack --mode production --config ./build/webpack.prod.js",
     "dev": "webpack --mode development --config ./build/webpack.dev.js",
-    "dev:server": "webpack-dev-server --config ./build/webpack.dev.js",
+    "dev:server": "webpack-dev-server --config ./build/webpack.dev.js --progress --color",
     "simulate": "concurrently \"yarn run serve\" \"yarn run dev:server\""
   },
   "devDependencies": {
@@ -69,13 +69,12 @@
     "@fortawesome/free-regular-svg-icons": "^5.10.1",
     "@fortawesome/free-solid-svg-icons": "^5.10.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "@reach/router": "^1.2.1",
     "dotenv": "^8.1.0",
     "path": "^0.12.7",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-pwa": "^0.0.1",
-    "react-router-dom": "^5.0.1",
     "react-spring": "^8.0.27",
     "react-svg": "^10.0.20"
   },
