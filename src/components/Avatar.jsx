@@ -1,5 +1,5 @@
 import React from 'react';
-import avatar from '@/assets/images/head.png';
+import avatar from '@/public/images/head.png';
 
 const Avatar = () => {
   return <img src={avatar} alt="avatar... maybe" />;
