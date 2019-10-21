@@ -1,5 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
+const RobotstxtPlugin = require('robotstxt-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -60,9 +62,67 @@ module.exports = {
       filename: 'bundle.css',
     }),
     new HtmlWebpackPlugin({
-      favicon: path.resolve(__dirname, '..', 'src', 'assets', 'favicon.ico'),
       filename: 'index.html',
-      template: 'src/html/index.html',
+      template: path.resolve(__dirname, '..', 'src/public/index.html'),
+      favicon: path.resolve(__dirname, '..', 'src/public/favicon/favicon.ico'),
+      minify: {
+        collapseWhitespace: true,
+      },
+    }),
+    new WebpackPwaManifest({
+      name: 'Likia Sun',
+      short_name: 'Likia',
+      description: 'Introduction of Taiwan full-stack-developer - Likia',
+      'theme-color': '#242424',
+      icons: [
+        {
+          src: path.resolve(
+            __dirname,
+            '..',
+            'src/public/favicon/favicon-16x16.png'
+          ),
+          size: '16x16',
+        },
+        {
+          src: path.resolve(
+            __dirname,
+            '..',
+            'src/public/favicon/favicon-32x32.png'
+          ),
+          size: '32x32',
+        },
+        {
+          src: path.resolve(
+            __dirname,
+            '..',
+            'src/public/favicon/apple-touch-icon.png'
+          ),
+          size: '180x180',
+        },
+        {
+          src: path.resolve(
+            __dirname,
+            '..',
+            'src/public/favicon/android-chrome-192x192.png'
+          ),
+          size: '192x192',
+        },
+        {
+          src: path.resolve(
+            __dirname,
+            '..',
+            'src/public/favicon/android-chrome-512x512.png'
+          ),
+          size: '512x512',
+        },
+      ],
+      theme_color: '#ffffff',
+      background_color: '#ffffff',
+      display: 'standalone',
+    }),
+    new RobotstxtPlugin({
+      filePath: path.resolve(__dirname, '..', 'src/public/robots.txt'),
     }),
   ],
+  performance: false,
 };

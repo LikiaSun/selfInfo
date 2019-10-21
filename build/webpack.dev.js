@@ -6,15 +6,18 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin;
 
 module.exports = merge(common, {
-  entry: [
-    'webpack-dev-server/client?http://senlima.local:9000',
-    'webpack/hot/only-dev-server',
-  ],
+  mode: 'development',
+  entry: ['react-hot-loader/patch'],
+  devtool: 'cheap-module-eval-soure-map',
+  output: {
+    path: path.resolve(__dirname, '../dist'),
+    filename: 'bundle.js',
+    chunkFilename: '[name].js',
+  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new BundleAnalyzerPlugin(),
   ],
-  devtool: 'inline-source-map',
   devServer: {
     contentBase: path.join(__dirname, '..', 'dist'),
     compress: true,
